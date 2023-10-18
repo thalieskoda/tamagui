@@ -40,3 +40,4 @@ export default function App() {
 10. yarn add react-native-svg @tamagui/lucide-icons
 11. yarn add react-native-safe-area-context
 12. npm i react-native-gesture-handler
+13. rapid api https://rapidapi.com/ajayakv/api/rest-countries/

@@ -4,8 +4,8 @@ import { ActivityIndicator } from "react-native";
 
 export const Countries = ({ navigation }) => {
   const [data, setData] = useState(null);
-  const [error, setError] = useState(null); // Use useState to manage the error state
-  const [isLoading, setIsLoading] = useState(true); // Start with isLoading set to true
+  const [error, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -15,7 +15,7 @@ export const Countries = ({ navigation }) => {
         headers: {
           "X-RapidAPI-Key": "51bfca0c62mshece35940d7c1bbdp1c4292jsnc420ad0fb819",
           "X-RapidAPI-Host": "ajayakv-rest-countries-v1.p.rapidapi.com",
-        },
+        }
       };
 
       try {
@@ -26,35 +26,28 @@ export const Countries = ({ navigation }) => {
         const result = await response.json();
         setIsLoading(false);
         setData(result);
+        console.log({ "data": result }); // Log the result, not the state
       } catch (error) {
         setIsLoading(false);
         setError(error);
+        console.log({ "error" : error });
       }
     };
 
     fetchData();
   }, []);
 
-  const getContent = () => {
-    if (isLoading) {
-      return <ActivityIndicator size="large" />;
-    }
 
-    if (error) {
-      return <Text>Error: {error.message}</Text>;
-    }
 
-    if (data) {
-      return (
+  return (
+    <>
+      {isLoading ? (
+        <ActivityIndicator />
+      ) : (
         <View>
-          <Text>Country Name: {data.name}</Text>
-          <Text>Population: {data.population}</Text>
+          <Text></Text>
         </View>
-      );
-    }
-
-    return <Text>No data available.</Text>;
-  };
-
-  return <View>{getContent()}</View>;
-};
+      )}
+    </>
+  );
+      };
