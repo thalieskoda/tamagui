@@ -16,6 +16,7 @@
     "@tamagui/lucide-icons": "^1.74.19",
     "expo": "~49.0.13",
     "expo-status-bar": "~1.6.0",
+    "node-fetch": "^3.3.2",
     "react": "18.2.0",
     "react-native": "0.72.5",
     "react-native-gesture-handler": "^2.13.3",
