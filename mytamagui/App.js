@@ -9,6 +9,7 @@ import config from "./tamagui.config";
 import { Homepage } from "./src/components/homepage";
 import { Details } from "./src/components/details";
 import { Countries } from "./src/components/countries";
+import { AddCountry } from "./src/components/add-country";
 
 const Stack = createStackNavigator();
 
@@ -21,6 +22,8 @@ export default function App() {
             <Stack.Screen name="TRVL-UP" component={Homepage} />
             <Stack.Screen name="Details" component={Details} />
             <Stack.Screen name="Countries" component={Countries}/>
+            <Stack.Screen name="Please add a new country" component={AddCountry}/>
+
           </Stack.Navigator>
         </NavigationContainer>
       </SafeAreaView>

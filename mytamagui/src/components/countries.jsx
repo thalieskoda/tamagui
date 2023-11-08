@@ -47,7 +47,7 @@ export const Countries = ({ navigation }) => {
             {countriesList.map((country, index) => {
               return (
                 <View key={index}>
-                  <Button size="$large" margin="$1.5" backgroundColor="pink">
+                  <Button size="$large" margin="$1.5" backgroundColor="$pink5Light" borderBlockStartColor="$pink10Light">
                     <Text>{country.name}</Text>
                   </Button>
                 </View>
