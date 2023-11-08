@@ -1,6 +1,7 @@
 import { View, Text, YStack, XStack, Button, ScrollView, H4 } from "tamagui";
 import { Countries } from "./countries";
 import { AddCountry } from "./add-country";
+
 export const Details = ({ navigation }) => {
   return (
     <View>
