@@ -41,3 +41,4 @@ export default function App() {
 11. yarn add react-native-safe-area-context
 12. npm i react-native-gesture-handler
 13. rapid api https://rapidapi.com/ajayakv/api/rest-countries/
+14. npm install @clerk/clerk-expo
