@@ -42,3 +42,4 @@ export default function App() {
 12. npm i react-native-gesture-handler
 13. rapid api https://rapidapi.com/ajayakv/api/rest-countries/
 14. npm install @clerk/clerk-expo
+15. npx expo install expo-blur

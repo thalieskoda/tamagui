@@ -10,6 +10,7 @@ export const FormCountry = () => {
 
       return () => {
         clearTimeout(timer);
+        
       };
     }
   }, [status]);
@@ -17,12 +18,12 @@ export const FormCountry = () => {
   return (
     <Form
       alignItems="center"
-      minWidth={300}
       gap="$2"
       onSubmit={() => setStatus("submitting")}
-      padding="$8">
+      padding="$8"
+>        
       <H4>{status[0].toUpperCase() + status.slice(1)}</H4>
-      <Form.Trigger asChild disabled={status !== "off"}>
+      <Form.Trigger asChild disabled={status !== ""}>
         <Button icon={status === "submitting" ? () => <Spinner /> : undefined}>
           Submit
         </Button>
