@@ -43,3 +43,4 @@ export default function App() {
 13. rapid api https://rapidapi.com/ajayakv/api/rest-countries/
 14. npm install @clerk/clerk-expo
 15. npx expo install expo-blur
+16. npm install react-native-loading-spinner-overlay
