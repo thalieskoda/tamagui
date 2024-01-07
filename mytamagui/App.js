@@ -16,6 +16,7 @@ import PublicLayout from "./src/components/auth/_layout";
 import { useSegments } from "expo-router";
 const clerkPublishableKey = process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY;
 import { useRouter } from "expo-router";
+import TabsNavigator from "./src/components/tabs/tabs-navigator";
 //own custom tokenCache - past this to our provider
 const tokenCache = {
   async getToken(key) {
@@ -74,6 +75,7 @@ export default function App() {
         <SafeAreaView style={styles.container}>
           <NavigationContainer>
             <Stack.Navigator>
+              <Stack.Screen name="Tabs" component={TabsNavigator} options={{ headerShown: false }} />
               <Stack.Screen name="TRVLUP" component={Homepage} />
               <Stack.Screen name="Details" component={Details} />
               <Stack.Screen name="Countries" component={Countries} />
